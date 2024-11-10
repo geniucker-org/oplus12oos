@@ -19,9 +19,9 @@ val gitCommitCount = "git rev-list HEAD --count".execute().toInt()
 val gitCommitHash = "git rev-parse --verify --short HEAD".execute()
 
 // also the soname
-val moduleId by extra("walletfix4oos")
-val moduleName by extra("Wallet Fix for OxygenOS")
-val verName by extra("2.0.2")
+val moduleId by extra("oplus12oos")
+val moduleName by extra("Oneplus 12 OOS")
+val verName by extra("1.0.0")
 val verCode by extra(1000+gitCommitCount)
 val commitHash by extra(gitCommitHash)
 val abiList by extra(listOf("arm64-v8a", "armeabi-v7a", "x86", "x86_64"))
@@ -40,7 +40,7 @@ tasks.register("Delete", Delete::class) {
 
 fun Project.configureBaseExtension() {
     extensions.findByType(AppExtension::class)?.run {
-        namespace = "top.geniucker.walletfix4oos"
+        namespace = "top.geniucker.oplus12oos"
         compileSdkVersion(androidCompileSdkVersion)
         ndkVersion = androidCompileNdkVersion
         buildToolsVersion = androidBuildToolsVersion
