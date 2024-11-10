@@ -107,7 +107,8 @@ public:
 
         LOGD("process: %s", process.data());
         if (!process.starts_with("com.finshell.wallet") &&
-            !process.starts_with("com.unionpay.tsmservice")) {
+            !process.starts_with("com.unionpay.tsmservice") &&
+            !process.starts_with("com.heytap.market")) {
             return;
         }
 
