@@ -15,7 +15,7 @@ using zygisk::Api;
 using zygisk::AppSpecializeArgs;
 using zygisk::ServerSpecializeArgs;
 
-#define LOG_TAG "WalletFix4OOS14"
+#define LOG_TAG "oplus12oos"
 
 #ifdef NDEBUG
 #define LOGD(...) ((void)0)
