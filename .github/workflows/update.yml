@@ -118,6 +118,14 @@ jobs:
             echo "OpenID not found"
             exit 1
           fi
+          if [ -d mnt/my_heytap/priv-app/KeKeMarket ]; then
+            cp -r mnt/my_heytap/priv-app/KeKeMarket product/priv-app/
+          elif [ -d mnt/my_stock/priv-app/KeKeMarket ]; then
+            cp -r mnt/my_stock/priv-app/KeKeMarket product/priv-app/
+          else
+            echo "KeKeMarket not found"
+            exit 1
+          fi
           
           # unmount images
           umount mnt/my_stock
